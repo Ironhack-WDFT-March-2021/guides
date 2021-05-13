@@ -27,6 +27,12 @@ $ npx create-react-app client
 $ rm -rf .git
 ```
 
+### Make sure in the .gitignore file in the root of your project you now also list the node_modules from the client folder
+
+```
+/client/node_modules
+```
+
 ### Then we want to add git to the root folder of our project
 
 ```bash
