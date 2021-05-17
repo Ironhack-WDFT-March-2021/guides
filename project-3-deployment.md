@@ -73,4 +73,26 @@ require("./error-handling")(app);
 module.exports = app;
 ```
 
+## Alternative to building the app before commiting it to GitHub
+
+#### Update 'scripts' in your root level package.json to this
+
+```json
+//
+  "scripts": {
+    "start": "node server.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently --kill-others \"npm run server\" \"npm run client\""
+  },
+```
+
+#### Locally you can now use this command to start server and client at once
+
+```bash
+$ npm run dev
+```
+
 And... that's it! Happy deployment 🐕 🚀
