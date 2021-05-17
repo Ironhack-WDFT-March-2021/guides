@@ -75,6 +75,12 @@ module.exports = app;
 
 ## Alternative to building the app before commiting it to GitHub
 
+#### Install concurrently to be able to start client and server at the same time
+
+```bash
+$ npm install concurrently
+```
+
 #### Update 'scripts' in your root level package.json to this
 
 ```json
